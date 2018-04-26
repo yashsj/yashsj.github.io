@@ -1,0 +1,468 @@
+body {
+	color: #666;
+}
+
+h1,h2,h3,h4,h5,h6,p,div,section,article,nav,li {
+	font-family: 'Raleway', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin: 0 0 10px;
+}
+
+a, a:hover, a:focus{
+	text-decoration: none;
+}
+
+header{
+	left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 88px;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.5);
+    display: table;
+}
+
+.logo {
+	display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 150px;
+}
+
+.logo img {
+	display: inline-block;
+	height: 65px;
+}
+
+nav {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+nav ul {
+	text-align: center;
+	margin: 0;	
+}
+
+nav ul li {
+	font-size: 13px;
+	text-transform: uppercase;
+	display: inline-block;
+	margin: 0 20px;
+	position: relative;
+	color: #fff;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+nav ul li:hover {
+	color: #fe4847;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+nav ul li.active {
+	color: #fe4847;
+}
+
+.icon-links {
+	display: table-cell;
+    vertical-align: middle;
+}
+
+.icon i {
+	margin-right: 30px;
+	font-size: 18px;
+	color: #fff;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.icon i:hover {
+	color: #fe4847;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+#slider {
+	position: relative;
+	height: 650px;
+}
+
+#slider-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 650px;
+	width: 100%;
+	background-size: cover;
+	background-position: top center;
+	background-attachment: fixed;
+	z-index: 9;
+	display: table;
+}
+
+.background-image-1 {
+	background: url('../images/Cover1.jpg') no-repeat;
+}
+
+.background-image-2 {
+	background: url('../images/Cover3.jpg') no-repeat;
+}
+
+#background {
+	position: relative;
+	height: 430px;
+}
+
+#background-image {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 430px;
+	width: 100%;
+	background: url('../images/Cover2.png') no-repeat;
+	background-size: cover;
+	background-position: top center;
+	background-attachment: scroll;
+	z-index: 9;
+	display: table;
+}
+
+
+#background-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 430px;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.52);
+	background-size: cover;
+	background-position: top center;
+	background-attachment: fixed;
+	z-index: 10;
+	display: table;
+}
+
+#slider-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 650px;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.52);
+	background-size: cover;
+	background-position: top center;
+	background-attachment: fixed;
+	z-index: 10;
+	display: table;
+}
+
+#slider-overlay h1, #background-overlay h1 {
+	font-size: 50px;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	color: #fff;
+	opacity: 0;
+	-webkit-transform: translateY(-100px);
+	transform: translateY(-100px);
+	-webkit-transition: all 1s 0.3s ease-out;
+	transition: all 1s 0.3s ease-out;
+}
+
+#slider-overlay h1.fadeIn, #background-overlay h1.fadeIn {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	transform: translateY(0px);
+}
+
+.single-banner {
+	overflow: hidden;
+	position: relative;
+}
+.single-banner > a {
+	display: block;
+	position: relative;
+}
+
+.single-banner > a::before {
+	background: #000 none repeat scroll 0 0;
+	content: "";
+	height: 100%;
+	opacity: 0;
+	position: absolute;
+	-webkit-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+	width: 100%;
+}
+
+.single-banner:hover a::before {
+	opacity: .5;
+}
+
+.single-banner img {
+	width: 100%;
+}
+
+.single-banner:hover .banner-caption {
+	opacity: 1;
+}
+
+.marg-20 {
+	margin-top:22px;
+}
+
+.marg-40 {
+	margin-top: 40px;
+}
+
+.banner-caption {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	color: #fff;
+	height: 100%;
+	left: 0;
+	padding: 30px;
+	position: absolute;
+	text-align: right;
+	top: 0;
+	width: 100%;
+	opacity: 0;
+	-webkit-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+}
+
+.banner-caption h2 {
+	top: 30px;
+	-webkit-transform: translate3d(0px, 20px, 0px);
+	transform: translate3d(0px, 20px, 0px);
+	-webkit-transition: -webkit-transform 0.35s ease 0s;
+	transition: -webkit-transform 0.35s ease 0s;
+	transition: transform 0.35s ease 0s;
+	transition: transform 0.35s ease 0s, -webkit-transform 0.35s ease 0s;
+	font-size: 25px;
+}
+
+.banner-caption h2::before {
+	background: #fff none repeat scroll 0 0;
+	content: "";
+	height: 2px;
+	left: 0;
+	position: absolute;
+	top: 100%;
+	-webkit-transform: translate3d(0px, 40px, 0px);
+	transform: translate3d(0px, 40px, 0px);
+	width: 100%;
+}
+
+.banner-caption h2::before, .banner-caption p {
+	opacity: 0;
+	-webkit-transition: opacity 0.35s ease 0s, -webkit-transform 0.35s ease 0s;
+	transition: opacity 0.35s ease 0s, -webkit-transform 0.35s ease 0s;
+	transition: opacity 0.35s ease 0s, transform 0.35s ease 0s;
+	transition: opacity 0.35s ease 0s, transform 0.35s ease 0s, -webkit-transform 0.35s ease 0s;
+}
+
+.banner-caption h2, .banner-caption p {
+	left: 30px;
+	padding: 10px 0;
+	position: absolute;
+	right: 30px;
+}
+
+.banner-caption p {
+	bottom: 30px;
+	font-size: 14px;
+	line-height: 1.5;
+	-webkit-transform: translate3d(0px, 100%, 0px);
+	transform: translate3d(0px, 100%, 0px);
+}
+
+.single-banner:hover h2 {
+	-webkit-transform: translate3d(0px, 0px, 0px);
+	transform: translate3d(0px, 0px, 0px);
+}
+
+.single-banner:hover h2::before, .single-banner:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0px, 0px, 0px);
+	transform: translate3d(0px, 0px, 0px);
+}
+
+.pad-60 {
+	padding:60px 0;
+}
+
+.dark-bg {
+	background: #f1f1f1 none repeat scroll 0 0;
+}
+
+.single-product {
+	margin-bottom: 22px;
+}
+
+.product-img {
+    overflow: hidden;
+    position: relative;
+}
+
+.product-details {
+    background: #222 none repeat scroll 0 0;
+    padding: 10px 12px;
+}
+
+.product-details a{
+	color: #eee;
+	-webkit-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.product-details a:hover {
+	color: #fe4847;
+	-webkit-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+}
+
+.product-details h3 {
+	font-size: 17px;
+}
+
+.product-details .price {
+    color: #fe4847;
+    font-size: 19px;
+}
+
+.product-details .price .old {
+	color: #eee;
+	font-size: 14px;
+	margin-left: 10px;
+	text-decoration: line-through;
+}
+
+ul.product-category {
+	margin-bottom: 25px;
+	text-align: center;
+}
+
+ul.product-category li:before {
+	background: #666 none repeat scroll 0 0;
+	content: "";
+	height: 13px;
+	position: absolute;
+	right: -14px;
+	top: 3px;
+	width: 2px;
+}
+
+ul.product-category li:last-child:before {
+	display: none;
+}
+
+ul.product-category li a.active, ul.product-category li a:hover {
+	color: #fe4847;
+}
+
+ul.product-category li {
+	list-style: none;
+	display: inline-block;
+    margin: 0 10px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+ul.product-category li a {
+	color: #666;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.blog-wraper {
+	margin-bottom: 22px;
+}
+	
+.blog-content {
+	padding-top: 20px;
+}
+
+.blog-img a {
+	position: relative;
+	display: block;
+}
+
+.blog-img a::before, .blog-img a::after {
+	background: #000 none repeat scroll 0 0;
+	content: "";
+	height: 100%;
+	left: 0;
+	opacity: 0.3;
+	position: absolute;
+	top: 0;
+	-webkit-transition: all 0.3s ease 0.1s;
+	transition: all 0.3s ease 0.1s;
+	width: 0;
+}
+
+.blog-img a::after {
+	left: inherit;
+	right: 0;
+}
+
+.blog-wraper:hover .blog-img a::before, .blog-wraper:hover .blog-img a::after {
+	width: 50%;
+}
+
+.blog-content h3 a{
+	font-size: 17px;
+	margin-bottom: 6px;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: bold;
+	color: #444;
+}
+
+.blog-content .blog-meta {
+	margin-bottom: 10px;
+	border-bottom: 1px solid #d5d5d5;
+	padding-bottom: 10px;
+}
+
+.blog-meta .date, .blog-meta .author {
+	color: #666;
+	margin-right: 10px;
+	text-transform: capitalize;
+	position: relative;
+}
+
+.blog-meta .author:before {
+	background: #999 none repeat scroll 0 0;
+	content: "";
+	height: 15px;
+	left: -6px;
+	position: absolute;
+	width: 1px;
+	top: 1px;
+}
+
+.blog-content p {
+	margin: 0 0 15px;
+}
+
+.blog-content a.read-more{
+	color: #444;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+.blog-content a.read-more:hover, .blog-content h3 a:hover{
+	color: #fe4847;
+	text-decoration: none;
+}
+
+
+

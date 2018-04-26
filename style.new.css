@@ -1,0 +1,118 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	border: 0;
+	outline: none;
+}
+
+.background {
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	background-size: cover;
+	background-position: top center;
+	background-attachment: fixed;
+	overflow: hidden;
+}
+
+#login #logo {
+	display: block;
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	top: calc(50% - 210px);
+	left: calc(50% - 50px);
+}
+
+#login-page {
+	background-image: url('../images/login-background.jpg');
+}
+
+button.button {
+	display: block;
+	font-size: 14px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color: #fff;
+	background: rgba(0, 0, 0, 0.4);
+	padding: 17px 0;
+	text-align: center;
+	-webkit-transition: all 500ms ease-in-out;
+	transition: all 500ms ease-in-out;
+	cursor: pointer;
+}
+
+button.button:hover {
+	background: rgba(0, 0, 0, 0.9);
+	color: #fff;
+}
+
+input.button {
+	display: block;
+	width: 300px;
+	position: absolute;
+	left: calc(50% - 150px);
+	letter-spacing: 1px;
+	font-size: 14px;
+	text-align: center;
+	color: #fff;
+	padding: 17px 0;
+	background: rgba(255, 255, 255, 0.2);
+	outline: none;
+	border: 0px;
+}
+
+#login input.button::-webkit-input-placeholder {
+    text-transform: uppercase;
+	letter-spacing: 2px;
+	color: rgba(255, 255, 255, 0.9);
+}
+
+#login input.button:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+
+#login input.button:nth-child(1) {
+	top: calc(50% - 50px);
+}
+
+#login input.button:nth-child(2) {
+	top: calc(50% + 15px);
+}
+
+#login button.button {
+	position: absolute;
+	width: 300px;
+	left: calc(50% - 150px);
+	top: calc(50% + 115px);
+}
+
+#login h3 {
+	color: #fff;
+	width: 100%;
+	font-size: 14px;
+	font-weight: normal;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	display: inline-block;
+	text-align: center;
+	position: absolute;
+	top: calc(50% + 210px);
+}
+
+#login h3 a {
+	color: #fff;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+@media (max-height: 500px) {
+	.background {
+		overflow: scroll;
+		height: 550px;
+	}
+}
